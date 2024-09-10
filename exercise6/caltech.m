@@ -1,0 +1,1 @@
+prepare_caltech('.\101_ObjectCategories',10);

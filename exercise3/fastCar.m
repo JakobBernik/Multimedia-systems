@@ -1,0 +1,82 @@
+fs=44100;
+kernel=gaussian_kernel(71,12);
+F1=conv(DampSound(175,fs,3),kernel);
+E1=conv(DampSound(330,fs,3),kernel);
+C1=conv(DampSound(262,fs,3),kernel);
+F2=conv(DampSound(349,fs,1),kernel);
+C2=conv(DampSound(131,fs,3),kernel);
+G1=conv(DampSound(392,fs,3),kernel);
+A1=conv(DampSound(220,fs,3),kernel);
+C3=conv(DampSound(523,fs,3),kernel);
+B1=conv(DampSound(494,fs,3),kernel);
+G2=conv(DampSound(196,fs,3),kernel);
+D1=conv(DampSound(587,fs,3),kernel);
+
+for i=1:2
+    for j=1:3
+    pause(1);
+    sound(F1,fs);
+    sound(E1,fs);
+    sound(C1,fs);
+    pause(0.5);
+    sound(F2,fs);
+    pause(0.5);
+    sound(E1,fs);
+    sound(C1,fs);
+    pause(0.5);
+    sound(C2,fs);
+    sound(C1,fs);
+    sound(G1,fs);
+    pause(1);
+    sound(G1,fs);
+    pause(0.5);
+    sound(C1,fs);
+    pause(1);
+   
+    if(j<3)
+        sound(A1,fs);
+        sound(C1,fs);
+        sound(C3,fs);
+        pause(1.5);
+        sound(G2,fs);
+        sound(B1,fs);
+        sound(C1,fs);
+        pause(1);
+        sound(B1,fs);
+        pause(0.5);
+        sound(C1,fs);
+    else
+        sound(A1,fs);
+        sound(C1,fs);
+        sound(C3,fs);
+        pause(0.7);
+        sound(D1,fs);
+        pause(0.5);
+        sound(C3,fs);
+        pause(0.5)
+        sound(G2,fs);
+        sound(B1,fs);
+        sound(C1,fs);
+        pause(0.7);
+        sound(C3,fs);
+        pause(0.7);
+        sound(B1,fs);
+    end  
+   end
+end
+        pause(0.7);
+        sound(A1,fs);
+        sound(C1,fs);
+        sound(C3,fs);
+        pause(1.5);
+        sound(G2,fs);
+        sound(B1,fs);
+        sound(C1,fs);
+        pause(1);
+        sound(B1,fs);
+        pause(0.5);
+        sound(C1,fs);
+        pause(0.5);
+        sound(E1,fs);
+        sound(C1,fs);
+        sound(G2,fs);
